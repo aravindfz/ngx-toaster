@@ -80,7 +80,8 @@
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
+    "prefer-const": false,
+    "no-unused-variable": true,
     "quotemark": [
       true,
       "single"
@@ -118,13 +119,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ngx",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "ngx",
       "kebab-case"
     ],
     "use-input-property-decorator": true,
