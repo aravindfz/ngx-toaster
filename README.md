@@ -1,7 +1,7 @@
 Native Angular Toaster Module (ngx-toaster)
 ==============================================
 
-        The library provides a toast notification which is written in native Angular and it is dependent on bootstrap, angular native animation.
+The library provides a toast notification which is written in native Angular and it is dependent on bootstrap, angular native animation.
 
 
 
@@ -23,6 +23,7 @@ Native Angular Toaster Module (ngx-toaster)
     export class AppModule {
     }
 ```
+
  3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module` 
 ```
     import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,32 +35,38 @@ Native Angular Toaster Module (ngx-toaster)
     export class AppModule {
     }
 ```
-   - More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
+     - More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
 
   4. Create a placeholder for the `ngx-toast-notification` componenet in your `app.component.html`
 ```
     <ngx-toast-notification></ngx-toast-notification>
 ```
+
   5. Inject the ToasterService into your component
 ```
     constructor(private toasterService: ToasterService) { }
 ```
+
   6. The toast message configuration contains following properties
   ```
-    Property        |   Data Type   |     Mandatory   |   Default Value           |               Usage                               |
-    id              |   string      |       No          |   ----------            |  Auto generated for each notification             |
-    message         |   string      |       Yes         |   ----------            |  The user defined toast message                   |
-    autoHide        |   boolean     |       No          |     true                |  This will hide the message                       |
-    displayDuration |   number      |       No          |     5000(milli seconds) |  Timeout Duration can be set using this property  |
-    showCloseButton |   boolean     |       No          |     true                |  Close button can be seen for manually closing it |
-    toastType       |   ToastType   |       Yes         |   ----------      
+   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
+   |  **Property**    | **Data Type** |  **Mandatory**   |   **Default Value**     |               **Usage**                           |
+   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
+   |  id              |   string      |       No         |   ----------            |  Auto generated for each notification             |
+   |  message         |   string      |       Yes        |   ----------            |  The user defined toast message                   |
+   |  autoHide        |   boolean     |       No         |     true                |  This will hide the message                       |
+   |  displayDuration |   number      |       No         |     5000(milli seconds) |  Timeout Duration can be set using this property  |
+   |  showCloseButton |   boolean     |       No         |     true                |  Close button can be seen for manually closing it |
+   |  toastType       |   ToastType   |       Yes        |   ----------            |  Type of the toast message can be set htere       |
+   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
   ```
-   - where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,<br>
-                  ERROR<br>
-                  WARNING<br>
-                  SUCCESS<br>
-                  INFORMATION<br>
-                  EMPTY<br>
+     - where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,<br>
+                    ERROR<br>
+                    WARNING<br>
+                    SUCCESS<br>
+                    INFORMATION<br>
+                    EMPTY<br>
+
   7. To show the toast message you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
   ```
     let toastNotificationConfiguration: ToastNotificationConfiguration = {
@@ -72,10 +79,12 @@ Native Angular Toaster Module (ngx-toaster)
      this.toasterService.showToastMessage(toastNotificationConfiguration);
   ```
   8. To manually close a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
+  
   9. To hide all the toast messages you should be using the `clearAllToastMessages()` method.
   ```
       this.toastNotificationService.clearAllToastMessages();
   ```
+  
   10. To show multiple toast messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
   ```
     let informationalToastNotificationConfiguration: ToastNotificationConfiguration = {
