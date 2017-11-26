@@ -58,14 +58,15 @@ The library provides a toast notification which is written in native Angular and
 | showCloseButton |   boolean     |       No         |     true                |  Close button can be seen for manually closing it |
 | toastType       |   ToastType   |       Yes        |   ----------            |  Type of the toast message can be set htere       |
 
-- where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,<br>
+- where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,
+
                                         ERROR<br>
                                         WARNING<br>
                                         SUCCESS<br>
                                         INFORMATION<br>
                                         EMPTY<br>
 
-   7. To show the toast message you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
+7. To show the toast message you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
   ```
     let toastNotificationConfiguration: ToastNotificationConfiguration = {
               message: 'Sample Toast message',
@@ -76,14 +77,14 @@ The library provides a toast notification which is written in native Angular and
      };
      this.toasterService.showToastMessage(toastNotificationConfiguration);
   ```
-   8. To manually close a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
+8. To manually close a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
   
-   9. To hide all the toast messages you should be using the `clearAllToastMessages()` method.
+9. To hide all the toast messages you should be using the `clearAllToastMessages()` method.
   ```
       this.toastNotificationService.clearAllToastMessages();
   ```
   
-   10. To show multiple toast messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
+10. To show multiple toast messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
   ```
     let informationalToastNotificationConfiguration: ToastNotificationConfiguration = {
               message: 'Informational Toast message',
