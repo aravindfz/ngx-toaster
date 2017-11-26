@@ -30,7 +30,7 @@ The library provides a toast notification which is written in native Angular and
 ```
 *************************
 
- 3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module` 
+ 3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module`. More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
 ```
     import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -41,7 +41,7 @@ The library provides a toast notification which is written in native Angular and
     export class AppModule {
     }
 ```
-     - More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
+ 
      
 *************************
 
