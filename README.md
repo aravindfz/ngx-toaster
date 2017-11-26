@@ -37,17 +37,17 @@ The library provides a toast notification which is written in native Angular and
 ```
      - More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
 
-  4. Create a placeholder for the `ngx-toast-notification` componenet in your `app.component.html`
+  4. **Create a placeholder** for the `ngx-toast-notification` componenet in your `app.component.html`
 ```
     <ngx-toast-notification></ngx-toast-notification>
 ```
 
-  5. Inject the ToasterService into your component
+  5. Inject the **ToasterService** into your component
 ```
     constructor(private toasterService: ToasterService) { }
 ```
 
-  6. The toast message configuration contains following properties<br/>
+  6. The **toast message configuration** contains following properties<br/>
 
 |**Property**    | **Data Type** |  **Mandatory**   |   **Default Value**     |               **Usage**                            |
 | ------------   |  ----------   |  --------------  |  ---------------------  |  ----------------------------------------------    |
@@ -66,7 +66,7 @@ The library provides a toast notification which is written in native Angular and
                                         INFORMATION<br>
                                         EMPTY<br>
 
-7. To show the toast message you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
+7. To **show the toast message** you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
   ```
     let toastNotificationConfiguration: ToastNotificationConfiguration = {
               message: 'Sample Toast message',
@@ -77,14 +77,14 @@ The library provides a toast notification which is written in native Angular and
      };
      this.toasterService.showToastMessage(toastNotificationConfiguration);
   ```
-8. To manually close a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
+8. To **manually close** a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
   
-9. To hide all the toast messages you should be using the `clearAllToastMessages()` method.
+9. To **hide all** the toast messages you should be using the `clearAllToastMessages()` method.
   ```
       this.toastNotificationService.clearAllToastMessages();
   ```
   
-10. To show multiple toast messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
+10. To show **multiple toast** messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
   ```
     let informationalToastNotificationConfiguration: ToastNotificationConfiguration = {
               message: 'Informational Toast message',
