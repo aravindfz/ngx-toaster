@@ -47,19 +47,17 @@ The library provides a toast notification which is written in native Angular and
     constructor(private toasterService: ToasterService) { }
 ```
 
-  6. The toast message configuration contains following properties
-  ```
-   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
-   |  **Property**    | **Data Type** |  **Mandatory**   |   **Default Value**     |               **Usage**                           |
-   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
-   |  id              |   string      |       No         |   ----------            |  Auto generated for each notification             |
-   |  message         |   string      |       Yes        |   ----------            |  The user defined toast message                   |
-   |  autoHide        |   boolean     |       No         |     true                |  This will hide the message                       |
-   |  displayDuration |   number      |       No         |     5000(milli seconds) |  Timeout Duration can be set using this property  |
-   |  showCloseButton |   boolean     |       No         |     true                |  Close button can be seen for manually closing it |
-   |  toastType       |   ToastType   |       Yes        |   ----------            |  Type of the toast message can be set htere       |
-   |------------------|---------------|------------------|-------------------------|---------------------------------------------------|
-  ```
+  6. The toast message configuration contains following properties<br/>
+
+|**Property**    | **Data Type** |  **Mandatory**   |   **Default Value**     |               **Usage**                            |
+| ------------   |  ----------   |  --------------  |  ---------------------  |  ----------------------------------------------    |
+| id              |   string      |       No         |   ----------            |  Auto generated for each notification             |
+| message         |   string      |       Yes        |   ----------            |  The user defined toast message                   |
+| autoHide        |   boolean     |       No         |     true                |  This will hide the message                       |
+| displayDuration |   number      |       No         |     5000(milli seconds) |  Timeout Duration can be set using this property  |
+| showCloseButton |   boolean     |       No         |     true                |  Close button can be seen for manually closing it |
+| toastType       |   ToastType   |       Yes        |   ----------            |  Type of the toast message can be set htere       |
+
      - where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,<br>
                     ERROR<br>
                     WARNING<br>
