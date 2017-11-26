@@ -11,7 +11,7 @@ The library provides a toast notification which is written in native Angular and
 
  1. Install the ngx-toaster using npm
     `npm install ngx-toaster`
-     - **Note** : Use the regular npm flags such as 
+   - **Note** : Use the regular npm flags such as 
          - `--save` to include under dependencies in `package.json`.
          - `-g` to install it globally
          
@@ -30,8 +30,10 @@ The library provides a toast notification which is written in native Angular and
 ```
 *************************
 
- 3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module`. More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
-```
+ 3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module`. 
+ - **Note** : Further exploration of `@angular/animations` module can be referred [**here**](https://angular.io/guide/animations#animations), official documentation.
+ 
+ ```
     import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     @NgModule({
