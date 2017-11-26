@@ -4,7 +4,11 @@
     "email": "aravind.fz@gnail.com",
     "name": "Aravind"
   },
-  "version": "0.0.1",
+    "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:aravindfz/ngx-toaster.git"
+  },
+  "version": "1.0.1",
   "license": "MIT",
   "main": "lib/index",
   "scripts": {
