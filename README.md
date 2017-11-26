@@ -3,11 +3,11 @@ Native Angular Toaster Module (ngx-toaster)
 
 The library provides a toast notification which is written in native Angular and it is dependent on bootstrap, angular native animation.
 
-
-
+<p align="center">
+    <img src="scripts/ngx-toaster-output.PNG"/>
+</p>
 
 ## Guide:
-*************************
 
  1. Install the ngx-toaster using npm
     `npm install ngx-toaster`
