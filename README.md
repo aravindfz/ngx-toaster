@@ -5,13 +5,18 @@ The library provides a toast notification which is written in native Angular and
 
 
 
+
 ## Guide:
+*************************
+
  1. Install the ngx-toaster using npm
     `npm install ngx-toaster`
      - **Note** : Use the regular npm flags such as 
          - `--save` to include under dependencies in `package.json`.
          - `-g` to install it globally
          
+*************************
+
  2. Add `ToasterModule` to AppModule by importing it from `ngx-toaster` package 
 ```
     import { ToasterModule } from 'ngx-toaster/src/lib';
@@ -23,6 +28,7 @@ The library provides a toast notification which is written in native Angular and
     export class AppModule {
     }
 ```
+*************************
 
  3. As this library uses Angular animations. `BrowserAnimationsModule` should also be imported to the `app.module` 
 ```
@@ -36,16 +42,22 @@ The library provides a toast notification which is written in native Angular and
     }
 ```
      - More information on this module is available in the official documentation [**here**](https://angular.io/guide/animations#animations).
+     
+*************************
 
   4. **Create a placeholder** for the `ngx-toast-notification` componenet in your `app.component.html`
 ```
     <ngx-toast-notification></ngx-toast-notification>
 ```
 
+*************************
+
   5. Inject the **ToasterService** into your component
 ```
     constructor(private toasterService: ToasterService) { }
 ```
+
+*************************
 
   6. The **toast message configuration** contains following properties<br/>
 
@@ -59,12 +71,13 @@ The library provides a toast notification which is written in native Angular and
 | toastType       |   ToastType   |       Yes        |   ----------            |  Type of the toast message can be set htere       |
 
 - where `ToastType` is a enumeration type that determines the type of the notification which takes a five values viz.,
+    * ERROR
+    * WARNING>
+    * SUCCESS
+    * INFORMATION
+    * EMPTY
 
-                                        ERROR<br>
-                                        WARNING<br>
-                                        SUCCESS<br>
-                                        INFORMATION<br>
-                                        EMPTY<br>
+*************************
 
 7. To **show the toast message** you should be calling the `showToastMessage()` method that takes `toastMessageConfiguration` as its argument
   ```
@@ -77,13 +90,19 @@ The library provides a toast notification which is written in native Angular and
      };
      this.toasterService.showToastMessage(toastNotificationConfiguration);
   ```
+*************************
+
 8. To **manually close** a particular toast message set the `autoHide` property as `false` and `showCloseButton` property as `true` which displays a close button using which the message can be manually closed.
-  
+
+*************************
+
 9. To **hide all** the toast messages you should be using the `clearAllToastMessages()` method.
   ```
       this.toastNotificationService.clearAllToastMessages();
   ```
-  
+
+*************************
+
 10. To show **multiple toast** messages you can call the `showToastMessage()` multiple times by configuring the notification object as you wish
   ```
     let informationalToastNotificationConfiguration: ToastNotificationConfiguration = {
