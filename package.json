@@ -4,7 +4,7 @@
     "email": "aravind.fz@gnail.com",
     "name": "Aravind"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:aravindfz/ngx-toaster.git"
   },
@@ -13,7 +13,7 @@
   "main": "lib/index",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o port=9999",
     "build": "ng build --prod --preserve-symlinks -nc",
     "test": "ng test",
     "lint": "ng lint",
